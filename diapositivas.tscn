@@ -1,0 +1,207 @@
+[gd_scene load_steps=12 format=3 uid="uid://dvd7nakwwre3f"]
+
+[ext_resource type="Script" path="res://diapositivas.gd" id="1_rsqhl"]
+[ext_resource type="Texture2D" uid="uid://h136cl58ases" path="res://imagenes/vecteezy_groovy-background-starburst-rays-colorful-funky-waves-and_.jpg" id="2_ci8oq"]
+[ext_resource type="Script" path="res://codigo_de_diapositivas/2.gd" id="3_3acgi"]
+[ext_resource type="Texture2D" uid="uid://yp1as4s75kh3" path="res://imagenes/utn.png" id="4_tger2"]
+[ext_resource type="Texture2D" uid="uid://dmlgn68ft8thq" path="res://imagenes/ES_Runa_Logo2_1024.png" id="5_pbjft"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1uwag"]
+font_size = 110
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_81pm4"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2n6ha"]
+gradient = SubResource("Gradient_81pm4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_lwuqm"]
+font_size = 110
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_hv560"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5eywi"]
+gradient = SubResource("Gradient_hv560")
+
+[node name="Diapositivas" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_rsqhl")
+diapositiva_actual = 3
+
+[node name="1" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Fondo" type="TextureRect" parent="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("2_ci8oq")
+
+[node name="Label" type="Label" parent="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Enchulame
+el Motor"
+label_settings = SubResource("LabelSettings_1uwag")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2" type="Control" parent="."]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_3acgi")
+
+[node name="TextureRect3" type="TextureRect" parent="2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_2n6ha")
+
+[node name="Label2" type="Label" parent="2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -775.5
+offset_top = -305.0
+offset_right = 775.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "soy Juan Manuel Fernandes dos Santos"
+label_settings = SubResource("LabelSettings_lwuqm")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Izquierda" type="Polygon2D" parent="2"]
+position = Vector2(659, 760)
+rotation = -0.0193391
+color = Color(0, 0, 0, 1)
+offset = Vector2(-449, -756)
+polygon = PackedVector2Array(568, 564, 407, 759, 312, 849, 250, 788, 255, 940, 426, 921, 354, 878, 450, 802, 616, 583)
+
+[node name="Medio" type="Polygon2D" parent="2"]
+visible = false
+position = Vector2(119, 495)
+rotation = -0.714333
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(568, 564, 407, 759, 312, 849, 250, 788, 255, 940, 426, 921, 354, 878, 450, 802, 616, 583)
+
+[node name="Derecha" type="Polygon2D" parent="2"]
+visible = false
+position = Vector2(676, 1113)
+rotation = -1.49756
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(568, 564, 407, 759, 312, 849, 250, 788, 255, 940, 426, 921, 354, 878, 450, 802, 616, 583)
+
+[node name="3" type="Control" parent="."]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect3" type="TextureRect" parent="3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_5eywi")
+metadata/_edit_lock_ = true
+
+[node name="Label2" type="Label" parent="3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = -229.5
+offset_right = 465.0
+offset_bottom = 229.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "profe en la UTN
+programador en"
+label_settings = SubResource("LabelSettings_1uwag")
+horizontal_alignment = 1
+
+[node name="Utn" type="Sprite2D" parent="3/Label2"]
+position = Vector2(761, -76.5)
+scale = Vector2(0.286667, 0.286667)
+texture = ExtResource("4_tger2")
+
+[node name="EsRunaLogo21024" type="Sprite2D" parent="3/Label2"]
+position = Vector2(464, 430)
+scale = Vector2(0.529514, 0.529514)
+texture = ExtResource("5_pbjft")
+
+[node name="5" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="5"]
+position = Vector2(1543, 302)
+rotation = -3.10866
+offset = Vector2(-570.146, -681.638)
+polygon = PackedVector2Array(809, 496, 381, 784, 278, 663, 257, 923, 499, 934, 396, 816, 830, 531)
