@@ -1,7 +1,7 @@
 @tool
-extends Control
+class_name ReproductorDeDiapositivas extends Control
 
-const DIAPOSITIVAS = preload("res://diapositivas.tscn")
+const DIAPOSITIVAS = preload("res://addons/slides/diapositivas.tscn")
 
 var diapositivas
 var diapositiva_actual: int :
@@ -18,6 +18,14 @@ var diapositiva_actual: int :
 func _ready():
 	diapositivas = DIAPOSITIVAS.instantiate()
 	diapositivas.diapositiva_actual = diapositiva_actual
+	var diapositivas_size = Vector2(
+		ProjectSettings.get_setting("display/window/size/viewport_width"),
+		ProjectSettings.get_setting("display/window/size/viewport_height")
+	)
+	diapositivas.z_index = 150
+	#diapositivas.scale.x = DisplayServer.screen_get_size(0).x / diapositivas_size.x
+	#diapositivas.scale.y = DisplayServer.screen_get_size(0).y / diapositivas_size.y
+	#diapositivas.size = DisplayServer.screen_get_size(0)
 	add_child(diapositivas)
 
 func is_action_pressed(action):

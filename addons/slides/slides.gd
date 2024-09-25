@@ -1,7 +1,7 @@
 @tool
 extends EditorPlugin
 
-const DIAPOSITIVAS = preload("res://diapositivas.tscn")
+const DIAPOSITIVAS = preload("res://addons/slides/diapositivas.tscn")
 const CONTROLES_DE_PRESENTADOR = preload("res://addons/slides/controles-de-presentador/controles_de_presentador.tscn")
 
 var controles_de_presentador
@@ -14,22 +14,28 @@ func _enter_tree():
 	)
 	InputMap.add_action("avanzar")
 	var input_map = {
-		"avanzar": KEY_KP_6,
-		"retroceder": KEY_KP_4,
-		"toggle_diapositivas": KEY_KP_5,
-		"accion_primaria": KEY_KP_7,
-		"accion_secundaria": KEY_KP_8,
-		"accion_terciaria": KEY_KP_9,
+		"avanzar": [ KEY_KP_6, 1 ],
+		"retroceder": [ KEY_KP_4, 2 ],
+		"toggle_diapositivas": [ KEY_KP_5, 9 ],
+		"accion_primaria": [ KEY_KP_7, 0 ],
+		"accion_secundaria": [ KEY_KP_8, 3 ],
+		"accion_terciaria": [ KEY_KP_9, 4 ],
 	}
+	
 	for action in input_map.keys():
-		var key = input_map[action]
+		var key = input_map[action][0]
 		var input_event = InputEventKey.new()
 		input_event.echo = false
 		input_event.keycode = key
 		input_event.ctrl_pressed = true
+		
+		var joypad_button = input_map[action][1]
+		var joypad_event = InputEventJoypadButton.new()
+		joypad_event.button_index = joypad_button
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
 		InputMap.action_add_event(action, input_event)
+		InputMap.action_add_event(action, joypad_event)
 	var full_screen_event = InputEventKey.new()
 	full_screen_event.echo = false
 	full_screen_event.keycode = KEY_ENTER

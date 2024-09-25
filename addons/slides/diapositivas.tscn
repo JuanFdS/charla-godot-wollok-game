@@ -1,0 +1,923 @@
+[gd_scene load_steps=33 format=3 uid="uid://dvd7nakwwre3f"]
+
+[ext_resource type="Script" path="res://addons/slides/diapositivas.gd" id="1_rsqhl"]
+[ext_resource type="Texture2D" uid="uid://ldadvipiv017" path="res://addons/slides/qq2ex19o.bmp" id="2_ufy85"]
+[ext_resource type="Texture2D" uid="uid://rvv5oh61bq55" path="res://addons/slides/ps86wzi9.bmp" id="3_nxxhw"]
+[ext_resource type="Script" path="res://addons/slides/enchulame_el_motor.gd" id="5_1e2o1"]
+[ext_resource type="Texture2D" uid="uid://ty0mfpjap0fs" path="res://addons/slides/6n4mr8ee.bmp" id="5_32tqw"]
+[ext_resource type="Texture2D" uid="uid://ebw22qepu56w" path="res://addons/slides/di1dewxv.bmp" id="5_i3chd"]
+[ext_resource type="Texture2D" uid="uid://b2radtuhsp20h" path="res://addons/slides/New Project(5).png" id="7_shy20"]
+
+[sub_resource type="Gradient" id="Gradient_81pm4"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2n6ha"]
+gradient = SubResource("Gradient_81pm4")
+
+[sub_resource type="SystemFont" id="SystemFont_4ddtj"]
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_wmdgt"]
+fallbacks = Array[Font]([SubResource("SystemFont_4ddtj")])
+font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_uqobm"]
+font = SubResource("SystemFont_wmdgt")
+font_size = 110
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_aeomr"]
+fallbacks = Array[Font]([SubResource("SystemFont_4ddtj")])
+font_names = PackedStringArray("Sylfaen")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_45vql"]
+font = SubResource("SystemFont_aeomr")
+font_size = 110
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rihok"]
+
+[sub_resource type="SystemFont" id="SystemFont_ylf6y"]
+font_names = PackedStringArray("Cooper", "Ravie", "Snap ITC")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_1uwag"]
+font = SubResource("SystemFont_ylf6y")
+font_size = 200
+shadow_size = 100
+shadow_color = Color(0.137255, 0.156863, 0.32549, 1)
+shadow_offset = Vector2(20, 20)
+
+[sub_resource type="SystemFont" id="SystemFont_uaoa1"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_g46l5"]
+font = SubResource("SystemFont_uaoa1")
+font_size = 80
+
+[sub_resource type="SystemFont" id="SystemFont_sbsx1"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_603cw"]
+font = SubResource("SystemFont_sbsx1")
+font_size = 80
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_n4dp4"]
+font_names = PackedStringArray("Cooper", "Ravie", "Snap ITC")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_cjkmw"]
+font = SubResource("SystemFont_n4dp4")
+font_size = 150
+shadow_size = 100
+shadow_color = Color(0.137255, 0.156863, 0.32549, 1)
+shadow_offset = Vector2(20, 20)
+
+[sub_resource type="GDScript" id="GDScript_8iux7"]
+script/source = "@tool
+extends Control
+
+func entrar():
+	create_tween().tween_property(
+		$Label2,
+		\"visible_ratio\",
+		1.0,
+		0.5
+	).from(0.0)
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_qu4gu"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_ihmds"]
+script/source = "@tool
+extends Control
+
+func entrar():
+	create_tween().tween_property(
+		self,
+		\"scale\",
+		Vector2.ZERO,
+		1.0).set_trans(Tween.TRANS_CUBIC).from(Vector2.ONE)
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a3qed"]
+content_margin_left = 10.0
+content_margin_top = 0.0
+bg_color = Color(0, 0, 0, 0.862745)
+skew = Vector2(1, 0)
+expand_margin_left = 200.0
+expand_margin_right = 100.0
+
+[sub_resource type="SystemFont" id="SystemFont_u73i2"]
+font_names = PackedStringArray("Cooper", "Ravie", "Snap ITC")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_xnusq"]
+font = SubResource("SystemFont_u73i2")
+font_size = 60
+shadow_size = 30
+shadow_color = Color(0.137255, 0.156863, 0.32549, 1)
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7tbg"]
+content_margin_left = 10.0
+content_margin_top = 0.0
+bg_color = Color(0, 0, 0, 0.862745)
+skew = Vector2(1, 0)
+expand_margin_left = 200.0
+expand_margin_right = 100.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="SystemFont" id="SystemFont_7cjgy"]
+font_names = PackedStringArray("Cooper", "Ravie", "Snap ITC")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_fn8aw"]
+font = SubResource("SystemFont_7cjgy")
+font_size = 100
+shadow_size = 30
+shadow_color = Color(0.137255, 0.156863, 0.32549, 1)
+shadow_offset = Vector2(5, 5)
+
+[node name="Diapositivas" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_rsqhl")
+diapositiva_actual = 12
+
+[node name="Holi" type="Control" parent="."]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="Holi"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_2n6ha")
+
+[node name="Label2" type="Label" parent="Holi"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -865.0
+offset_top = -238.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Holi (?"
+label_settings = SubResource("LabelSettings_uqobm")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Yo" type="Control" parent="."]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="Yo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_2n6ha")
+
+[node name="Label2" type="Label" parent="Yo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -775.5
+offset_top = -305.0
+offset_right = 775.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "soy Juan Manuel Fernandes dos Santos"
+label_settings = SubResource("LabelSettings_45vql")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Qq2Ex19o" type="Sprite2D" parent="Yo"]
+position = Vector2(1417, 774)
+scale = Vector2(0.55679, 0.55679)
+texture = ExtResource("2_ufy85")
+
+[node name="Ps86Wzi9" type="Sprite2D" parent="Yo"]
+position = Vector2(507, 756)
+scale = Vector2(1.89111, 1.89111)
+texture = ExtResource("3_nxxhw")
+
+[node name="Titulo" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_1e2o1")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Titulo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GodotLogo" type="TextureRect" parent="Titulo"]
+modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = 285.12
+offset_top = -295.12
+offset_right = 797.12
+offset_bottom = 146.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_rihok")
+
+[node name="Label" type="Label" parent="Titulo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.15708
+pivot_offset = Vector2(457, 570)
+text = "Godot para
+programadores
+objetosos"
+label_settings = SubResource("LabelSettings_1uwag")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QueEsGodot" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="QueEsGodot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GodotLogo" type="TextureRect" parent="QueEsGodot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = -943.88
+offset_top = 153.88
+offset_right = -429.88
+offset_bottom = 597.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_32tqw")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="QueEsGodot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -38.0
+offset_bottom = -664.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "¿Qué es godot?"
+label_settings = SubResource("LabelSettings_1uwag")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QueEsGodot2" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="QueEsGodot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="QueEsGodot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -38.0
+offset_bottom = -664.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "¿Qué es godot?"
+label_settings = SubResource("LabelSettings_1uwag")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="QueEsGodot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 717.0
+offset_top = 397.0
+offset_right = -158.0
+offset_bottom = -169.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "- Motor de Videojuegos"
+label_settings = SubResource("LabelSettings_g46l5")
+horizontal_alignment = 1
+
+[node name="GodotLogo" type="TextureRect" parent="QueEsGodot2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = -943.88
+offset_top = 153.88
+offset_right = -429.88
+offset_bottom = 597.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_32tqw")
+expand_mode = 1
+
+[node name="QueEsGodot3" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="QueEsGodot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="QueEsGodot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -38.0
+offset_bottom = -664.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "¿Qué es godot?"
+label_settings = SubResource("LabelSettings_1uwag")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="QueEsGodot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 717.0
+offset_top = 397.0
+offset_right = -158.0
+offset_bottom = -169.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "- Motor de Videojuegos
+- Open Source"
+label_settings = SubResource("LabelSettings_g46l5")
+horizontal_alignment = 1
+
+[node name="GodotLogo2" type="TextureRect" parent="QueEsGodot3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = -943.88
+offset_top = 153.88
+offset_right = -429.88
+offset_bottom = 597.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_32tqw")
+expand_mode = 1
+
+[node name="QueEsGodot4" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="TextureRect" parent="QueEsGodot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_i3chd")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="QueEsGodot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -38.0
+offset_bottom = -664.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "¿Qué es godot?"
+label_settings = SubResource("LabelSettings_1uwag")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="QueEsGodot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 717.0
+offset_top = 397.0
+offset_right = -158.0
+offset_bottom = -169.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "- Motor de Videojuegos
+- Open Source
+- Argentino"
+label_settings = SubResource("LabelSettings_603cw")
+horizontal_alignment = 1
+
+[node name="GodotLogo" type="TextureRect" parent="QueEsGodot4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = -943.88
+offset_top = 153.88
+offset_right = -429.88
+offset_bottom = 597.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_32tqw")
+expand_mode = 1
+
+[node name="WollokGodot" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="WollokGodot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="WollokGodot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -23.0
+offset_right = 20.0
+offset_bottom = -640.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "¿Si conozco Wollok,
+puedo usar godot?"
+label_settings = SubResource("LabelSettings_cjkmw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GodotLogo" type="TextureRect" parent="WollokGodot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = -943.88
+offset_top = 153.88
+offset_right = -429.88
+offset_bottom = 597.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_32tqw")
+expand_mode = 1
+
+[node name="NewProject(5)" type="Sprite2D" parent="WollokGodot"]
+position = Vector2(1471.75, 701)
+scale = Vector2(0.470513, 0.470513)
+texture = ExtResource("7_shy20")
+
+[node name="WollokGodot2" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = SubResource("GDScript_8iux7")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="WollokGodot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="WollokGodot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -23.0
+offset_right = 20.0
+offset_bottom = -640.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "¿Si conozco Wollok,
+puedo usar godot?"
+label_settings = SubResource("LabelSettings_cjkmw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="WollokGodot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = 860.0
+offset_right = 35.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "Seeeeeeeeeeeeeeee"
+label_settings = SubResource("LabelSettings_qu4gu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GodotLogo" type="TextureRect" parent="WollokGodot2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = -943.88
+offset_top = 153.88
+offset_right = -429.88
+offset_bottom = 597.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_32tqw")
+expand_mode = 1
+
+[node name="NewProject(5)" type="Sprite2D" parent="WollokGodot2"]
+position = Vector2(1471.75, 701)
+scale = Vector2(0.470513, 0.470513)
+texture = ExtResource("7_shy20")
+
+[node name="WollokGodot3" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="WollokGodot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="WollokGodot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = 331.0
+offset_right = 35.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "Parecidos
+y
+Diferencias"
+label_settings = SubResource("LabelSettings_qu4gu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GodotLogo" type="TextureRect" parent="WollokGodot3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = -943.88
+offset_top = 153.88
+offset_right = -429.88
+offset_bottom = 597.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_32tqw")
+expand_mode = 1
+
+[node name="NewProject(5)" type="Sprite2D" parent="WollokGodot3"]
+position = Vector2(1471.75, 701)
+scale = Vector2(0.470513, 0.470513)
+texture = ExtResource("7_shy20")
+
+[node name="WollokGodot4" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = SubResource("GDScript_ihmds")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="WollokGodot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="WollokGodot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = 331.0
+offset_right = 35.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(457, 570)
+text = "Parecidos
+y
+Diferencias"
+label_settings = SubResource("LabelSettings_qu4gu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GodotLogo" type="TextureRect" parent="WollokGodot4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.564
+anchor_top = 0.264
+anchor_right = 0.564
+anchor_bottom = 0.329
+offset_left = -943.88
+offset_top = 153.88
+offset_right = -429.88
+offset_bottom = 597.68
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_32tqw")
+expand_mode = 1
+
+[node name="NewProject(5)" type="Sprite2D" parent="WollokGodot4"]
+position = Vector2(1471.75, 701)
+scale = Vector2(0.470513, 0.470513)
+texture = ExtResource("7_shy20")
+
+[node name="UIvsCodigo" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="UIvsCodigo"]
+layout_mode = 1
+offset_right = 915.0
+offset_bottom = 157.0
+pivot_offset = Vector2(457, 570)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a3qed")
+text = "Godot usa mucha UI
+Wollok Game es todo código"
+label_settings = SubResource("LabelSettings_xnusq")
+
+[node name="VisualsYNodos" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="VisualsYNodos"]
+layout_mode = 1
+offset_right = 915.0
+offset_bottom = 157.0
+pivot_offset = Vector2(457, 570)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a3qed")
+text = "Wollok -> Visuals
+Godot -> Nodos"
+label_settings = SubResource("LabelSettings_xnusq")
+
+[node name="VisualsYNodos2" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="VisualsYNodos2"]
+layout_mode = 1
+offset_right = 915.0
+offset_bottom = 157.0
+pivot_offset = Vector2(457, 570)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a3qed")
+text = "Wollok -> Visuals -> Tipado Estructural
+Godot -> Nodos -> Tipado Nominal"
+label_settings = SubResource("LabelSettings_xnusq")
+
+[node name="Objetos" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Objetos"]
+layout_mode = 1
+offset_right = 1055.0
+offset_bottom = 233.0
+pivot_offset = Vector2(457, 570)
+theme_override_styles/normal = SubResource("StyleBoxFlat_x7tbg")
+text = "Ambos son
+Orientados a Objetos"
+label_settings = SubResource("LabelSettings_fn8aw")

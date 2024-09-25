@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="diapositivas"
+config/name="Godot para programadores objetosos"
 config/features=PackedStringArray("4.3", "Forward Plus")
+run/low_processor_mode=true
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,11 +24,12 @@ RuakeLayer="*res://addons/ruake/core/RuakeLayer.tscn"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/transparent=true
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/extendable_inspector/plugin.cfg", "res://addons/ruake/plugin.cfg", "res://addons/slides/plugin.cfg")
+enabled=PackedStringArray("res://addons/extendable_inspector/plugin.cfg", "res://addons/ruake/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/slides/plugin.cfg", "res://addons/zylann.editor_debugger/plugin.cfg")
 
 [input]
 

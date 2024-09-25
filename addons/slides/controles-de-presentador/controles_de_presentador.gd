@@ -1,5 +1,5 @@
 @tool
-extends Control
+class_name ControlesDePresentador extends Control
 
 const REPRODUCTOR_DE_DIAPOSITIVAS = preload("res://addons/slides/reproductor-de-diapositivas/reproductor_de_diapositivas.tscn")
 @onready var toggle_slides = %ToggleSlides
